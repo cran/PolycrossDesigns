@@ -60,13 +60,13 @@ PD(6,"type7")
 \references{
 1) Morgan (1988a)<doi: 10.1007/BF00025112>."Polycross Designs with Complete Neighbour Balance".
 
-2) Morgan (1988b)(<doi:10.1111/j.2517-6161.1988.tb01714.x>."Balanced Polycross Designs".
+2) Morgan (1988b)<doi:10.1111/j.2517-6161.1988.tb01714.x>."Balanced Polycross Designs".
 
-3) Olesen  and Olesen (1973) < https://doi.org/10.1007/BF00036647>. "A Polycross Pattern Formula".
+3) Olesen  and Olesen (1973)<https://doi.org/10.1007/BF00036647>. "A Polycross Pattern Formula".
 
-4) Olesen( 1976) <https://doi.org/10.1007/BF00041582>."A Completely Balanced Polycross Design".
+4) Olesen (1976)<https://doi.org/10.1007/BF00041582>."A Completely Balanced Polycross Design".
 
-5) Varghese et al. (2015) <doi:10.1080/02664763.2015.1043860>. " Experimental Designs for Open Pollination in Polycross Trials".
+5) Varghese et al. (2015)<doi:10.1080/02664763.2015.1043860>. " Experimental Designs for Open Pollination in Polycross Trials".
 }
 \author{
 1) Cini Varghese, Division of Design of Experiments, ICAR-IASRI, New Delhi.

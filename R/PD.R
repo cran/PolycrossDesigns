@@ -61,13 +61,13 @@
 #'
 #'1) Morgan (1988a)<doi: 10.1007/BF00025112>."Polycross Designs with Complete Neighbour Balance".
 #'
-#'2) Morgan (1988b)(<doi:10.1111/j.2517-6161.1988.tb01714.x>."Balanced Polycross Designs".
+#'2) Morgan (1988b)<doi:10.1111/j.2517-6161.1988.tb01714.x>."Balanced Polycross Designs".
 #'
-#'3) Olesen  and Olesen (1973) < https://doi.org/10.1007/BF00036647>. "A Polycross Pattern Formula".
+#'3) Olesen  and Olesen (1973)<https://doi.org/10.1007/BF00036647>. "A Polycross Pattern Formula".
 #'
-#'4) Olesen( 1976) <https://doi.org/10.1007/BF00041582>."A Completely Balanced Polycross Design".
+#'4) Olesen (1976)<https://doi.org/10.1007/BF00041582>."A Completely Balanced Polycross Design".
 #'
-#'5) Varghese et al. (2015) <doi:10.1080/02664763.2015.1043860>. " Experimental Designs for Open Pollination in Polycross Trials".
+#'5) Varghese et al. (2015)<doi:10.1080/02664763.2015.1043860>. " Experimental Designs for Open Pollination in Polycross Trials".
 
 PD<-function(v,type){
   pme<-function(m){
@@ -109,7 +109,7 @@ PD<-function(v,type){
         final<-cbind(final,array1[,i],array2[,i])
       }
       final<-cbind(final[,2*m],"|",final,"|",final[,1])
-      message("Neighbour Restricted Block Design for Polycross Trials (Varghese et al.,2015)",quote=F)
+      message("Neighbour Restricted Block Design for Polycross Trials (Varghese et al.,2015)")
       cat("\n")
       prmatrix(final,rowlab=rep("",m),collab=rep("",((2*m)+4)),quote=FALSE)
       cat("\n")
@@ -118,7 +118,7 @@ PD<-function(v,type){
       print(c("Number of replication of genotypes =",m),quote=F)
       print(c("Block size =",2*m),quote=F)
       cat("\n")
-      message("Note: Design along with border plots at either ends",quote=F)
+      message("Note: Design along with border plots at either ends")
     }else{
       print("Please enter an even number, v(>2) where m(=v/2) is an odd number",quote=F)
     }
@@ -129,7 +129,7 @@ PD<-function(v,type){
     if(v%%4!=0){
       print("Please enter a number which is a multiple of 4 ",quote=F)
     }else{
-      message("Neighbour Restricted Row Column Design for polycross trials (Varghese et al.,2015)",quote=F)
+      message("Neighbour Restricted Row Column Design for polycross trials (Varghese et al.,2015)")
       cat("\n")
       m=v/4
       i=0
@@ -172,7 +172,7 @@ PD<-function(v,type){
       print(c("Number of columns within each array =",2),quote=F)
 
       cat("\n")
-      message("Note: Design along with border plots at either ends",quote=F)
+      message("Note: Design along with border plots at either ends")
     }
 
   }
@@ -182,7 +182,7 @@ PD<-function(v,type){
 
     if(as.integer(pme(v+1))>0){
 
-      message("Neighbour Balanced Polycross Design for v genotypes (Varghese et al.,2015)",quote=F)
+      message("Neighbour Balanced Polycross Design for v genotypes (Varghese et al.,2015)")
       cat("\n")
       aryno=1
       k<-c()
@@ -230,7 +230,7 @@ PD<-function(v,type){
 
     vv=(v-1)
     if(vv%%2==0 && v>4){
-      message("Neighbour Balanced Polycross Design for v genotypes (Varghese et al.,2015)",quote=F)
+      message("Neighbour Balanced Polycross Design for v genotypes (Varghese et al.,2015)")
       cat("\n")
       g<-function(i,j,v){
         m=(((-1)^((v+1)/2))*((v+1)/2))%%v
@@ -289,7 +289,7 @@ PD<-function(v,type){
     #prime    #(v-1) multiple of 3
     ######
     if(as.integer(pme(v))>0 && ((v-1)%%3)==0){
-      message("Polycross Design for Directional Wind System (Varghese et al.,2015)",quote=F)
+      message("Polycross Design for Directional Wind System (Varghese et al.,2015)")
       cat("\n")
       aryno=1
       ###########
@@ -348,7 +348,7 @@ PD<-function(v,type){
       print(c("Number of rows within each array =",(v-1)/2),quote=F)
       print(c("Number of columns within each array =",v),quote=F)
       cat("\n")
-      message("Note: Design along with right end border plots",quote=F)
+      message("Note: Design along with right end border plots")
     }else{
       print("Please enter a prime number(v) where (v-1) is multiple of 3.",quote=F)
     }
@@ -365,7 +365,7 @@ PD<-function(v,type){
       for(i in 2:v){
         row[i,]<-(row[1,]+row[i-1,])
       }
-      message("Neighbour Balanced Polycross Design (Olesen and Olesen,1973)", quote=F)
+      message("Neighbour Balanced Polycross Design (Olesen and Olesen,1973)")
       cat("\n")
       print(row%%(v+1))
       cat("\n")
@@ -386,7 +386,7 @@ cat("\n")
     #Morgan method for Odd numbers + even numbers
     vv=(v-1)
     if(vv%%2==0 && v>=3){
-      message("Completely Neighbour Balanced Polycross Design (Morgan,1988)",quote=F)
+      message("Completely Neighbour Balanced Polycross Design (Morgan,1988)")
       cat("\n")
       g<-function(i,j,v){
         m=(((-1)^((v+1)/2))*((v+1)/2))%%v
@@ -485,7 +485,7 @@ cat("\n")
     #olesen 1976  method (v+1) is prime
 
     if(as.integer(pme(v+1))>0 && v>2){
-      message("Completely Balanced Polycross Design (Olesen,1976)",quote=F)
+      message("Completely Balanced Polycross Design (Olesen,1976)")
       cat("\n")
       for(i in 1:v){
         mat<-matrix(0,nrow=v,ncol=v)
@@ -516,7 +516,7 @@ cat("\n")
     ####Morgan new method (prime)
     xx<-c(5,7,9,11)
     if(any(xx==v)){
-      message("Balanced Polycross Design (Morgan,1988)",quote=F)
+      message("Balanced Polycross Design (Morgan,1988)")
       cat("\n")
       if(v==5){
         mat<-matrix(c(0,1,3,1,2,4,3,4,1),nrow=3,byrow=T)
